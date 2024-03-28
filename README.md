@@ -54,7 +54,7 @@ d. Método estaVivo(): Verifica se o inimigo está vivo com base em sua vida
 atual.
 
 
-**************ideia***************
+*ideia* Bianca
 menu: 
 
 o jogador vai decidir, se quer ser guerreiro ou mago.
