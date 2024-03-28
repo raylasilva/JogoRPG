@@ -52,3 +52,32 @@ c. Método atacar(Jogador jogador): Permite que o inimigo ataque o jogador,
 reduzindo sua vida.
 d. Método estaVivo(): Verifica se o inimigo está vivo com base em sua vida
 atual.
+
+
+*ideia* Bianca
+menu: 
+
+o jogador vai decidir, se quer ser guerreiro ou mago.
+vamos imprimir o que cada um faz
+
+print("escolha seu personagem")
+("mago: ao usar poderes, perde mana, sendo seu total de mana 10")
+("guerreiro: usa força, cada equipamento tem uma quantidade de força que era consumida para atacar, sendo seu total 10")
+
+o jogador terá 10 de vida total, ele perde vida de acordo com o dano que é recebido do adversário
+
+depois vão ter as rodadas 
+
+rodadas:
+*rodada jogador*
+na rodada jogador, ele vai decidir se ele quer atacar ou defender
+*rodada computador*
+o computador vai decidir se vai atacar ou defender
+
+logo após cada um decidir o que vai fazer em cada rodada, vão acontecer as jogadas 
+ex1: se o jogador atacar e o computador defender, nenhum perde vida, mas perderão ataque ou mana
+ ex2: se o jogador e o computador atacar os dois perdem vida (se a espada da 1 de dano, ele perde um coração
+defender usa 2 de força
+ataque usa 1 de força 
+defesa mágica 2 de mana
+ataque mágico 1 de mana
