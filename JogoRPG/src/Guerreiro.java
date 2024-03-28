@@ -1,25 +1,30 @@
-public class Guerreiro {
-    private int espada;
-    private int escudo;
+import java.util.Random;
 
-    public Guerreiro(int espada, int escudo) {
-        this.espada = espada;
-        this.escudo = escudo;
+class Guerreiro extends Jogador {
+    // Construtor da classe Guerreiro
+    public Guerreiro(String nome, int vida, int mana) {
+        super(nome, vida, mana);
     }
 
-    public int getEspada() {
-        return espada;
+    // Implementação do método abstrato para atacar um inimigo
+    @Override
+    public void atacar(Inimigo inimigo, Random random) {
+        System.out.println(getNome() + " atacou o dragão com sua espada sem piedade!");
+        // Implementação do ataque do guerreiro
     }
 
-    public void setEspada(int espada) {
-        this.espada = espada;
+    // Implementação do método para defender-se
+    @Override
+    public void defender() {
+        // Implementação da defesa específica do guerreiro
+        System.out.println(getNome() + " assumiu uma postura defensiva!");
     }
 
-    public int getEscudo() {
-        return escudo;
-    }
-
-    public void setEscudo(int escudo) {
-        this.escudo = escudo;
+    // Implementação do método para recuperar mana
+    @Override
+    public void recuperarMana() {
+        // Implementação específica do guerreiro para recuperar mana
+        System.out.println(getNome() + " recuperou 20 de mana.");
+        setMana(getMana() + 20);
     }
 }

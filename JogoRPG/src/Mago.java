@@ -1,16 +1,29 @@
-public class Mago extends Jogador {
-    private int mana;
+import java.util.Random;
 
-    public Mago(int vida, int ataque, int mana) {
-        super(vida, ataque);
-        this.mana = mana;
+class Mago extends Jogador {
+    // Construtor da classe Mago
+    public Mago(String nome, int vida, int mana) {
+        super(nome, vida, mana);
     }
 
-    public int getMana() {
-        return mana;
+    // Implementação do método abstrato para atacar um inimigo
+    @Override
+    public void atacar(Inimigo inimigo, Random random) {
+        System.out.println(getNome() + " lançou o feitiço Bólido Escuro contra o dragão!");
+        // Implementação do ataque do mago
     }
 
-    public void setMana(int mana) {
-        this.mana = mana;
+    // Implementação do método para defender-se
+    @Override
+    public void defender() {
+        // Implementação da defesa específica do mago
+        System.out.println(getNome() + " conjurou um escudo mágico!");
+    }
+
+    @Override
+    public void recuperarMana() {
+        // Implementação específica do mago para recuperar mana
+        System.out.println(getNome() + " recuperou 20 de mana.");
+        setMana(getMana() + 20);
     }
 }
