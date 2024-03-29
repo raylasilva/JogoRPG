@@ -34,10 +34,13 @@ class Jogo {
 
                 switch (escolha) {
                     case 1:
-                        System.out.println("Gandolf");
+                        //ESSE AQUI É PRA CHAMAR O QUE CADA UM TEM NA CLASSE AO SER ESCOLHIDO
+                        jogador = new Mago();
+                        System.out.println("Você escolheu o Mago Gandolf para lutar contra o terrível Dragão Volvagia!");
                         break;
                     case 2:
-                        System.out.println("Aragon");
+                        jogador = new Guerreiro();
+                        System.out.println("Você escolheu o Guerreiro Aragon para lutar contra o terrível Dragão Volvagia!");
                         break;
                     case 3:
                         System.out.println("Você saiu do jogo. Até logo!");
