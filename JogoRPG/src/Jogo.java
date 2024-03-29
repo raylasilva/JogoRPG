@@ -13,7 +13,7 @@ class Jogo {
 
     public void iniciarJogo() {
         Scanner scanner = new Scanner(System.in);
-
+        System.out.println("------------------------------------");
         System.out.println("====================================");
         System.out.println("  Bem-vindo ao Jogo de RPG Fantasia " );
         System.out.println("------------------------------------");
