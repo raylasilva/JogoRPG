@@ -13,15 +13,48 @@ class Jogo {
 
     public void iniciarJogo() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Bem-vindo ao jogo RPG!");
-        System.out.println("Você se depara com um temível dragão! Prepare-se para a batalha!");
-        System.out.println("-------------------------------");
+        System.out.println("------------------------------------");
+        System.out.println("====================================");
+        System.out.println("  Bem-vindo ao Jogo de RPG Fantasia " );
+        System.out.println("------------------------------------");
+        System.out.println("Você se depara com um temível dragão!\nPrepare-se para a batalha!");
+        System.out.println("====================================");
+        System.out.println("|                                  |");
+        System.out.println("|        Escolha seu Herói:        |");
+        System.out.println("|                                  |");
+        System.out.println("|  1. Gandolf - O Mago             |");
+        System.out.println("|  2. Aragon - O Guerreiro         |");
+        System.out.println("|  3. Sair do Jogo                 |");
+        System.out.println("|                                  |");
+        System.out.println("====================================");
+        int escolha;
+            do {
+                System.out.print("Escolha seu Herói: ");
+               escolha = scanner.nextInt();
+
+                switch (escolha) {
+                    case 1:
+                        //ESSE AQUI É PRA CHAMAR O QUE CADA UM TEM NA CLASSE AO SER ESCOLHIDO
+                        jogador = new Mago();
+                        System.out.println("Você escolheu o Mago Gandolf para lutar contra o terrível Dragão Volvagia!");
+                        break;
+                    case 2:
+                        jogador = new Guerreiro();
+                        System.out.println("Você escolheu o Guerreiro Aragon para lutar contra o terrível Dragão Volvagia!");
+                        break;
+                    case 3:
+                        System.out.println("Você saiu do jogo. Até logo!");
+                        return;
+                    default:
+                        System.out.println("Opção inválida. Por favor, escolha novamente.");
+                }
+            } while (escolha < 1 || escolha > 3);
 
         while (jogador.estaVivo() && inimigo.estaVivo()) {
             System.out.println("Escolha sua ação:");
             System.out.println("1. Atacar");
             System.out.println("2. Defender");
-            int escolha = scanner.nextInt();
+             escolha = scanner.nextInt();
 
             if (escolha == 1) {
                 jogador.atacar(inimigo);

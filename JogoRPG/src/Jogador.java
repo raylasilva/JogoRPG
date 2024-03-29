@@ -8,24 +8,22 @@ class Jogador {
         this.ataque = 10;
         this.defendendo = false;
     }
-
+// ESSE AQUI REALMENTE AINDA NÃO ENTENDI A LÓGICA T.T o sono bateu
     public void atacar(Inimigo dragao) {
-        System.out.println("Você ataca o dragão!");
-        int dano = this.ataque;
-        if (defendendo) {
-            dano /= 2;
-            defendendo = false;
-        }
-        dragao.vida -= dano;
-        System.out.println("Vida do dragão: " + dragao.vida);
+        System.out.println("Ataque indefinido.");
+    }
+
+    public void ataqueEspecial(Inimigo dragao, int escolha) {
+        System.out.println("Ataque indefinido.");
     }
 
     public void defender() {
-        System.out.println("Você assume uma postura defensiva!");
-        defendendo = true;
+        System.out.println("Defesa indefinida.");
     }
+//alterado ate aqui, calma
 
     public boolean estaVivo() {
         return vida > 0;
     }
 }
+
