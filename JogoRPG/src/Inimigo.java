@@ -11,7 +11,13 @@ class Inimigo {
 
     public void atacar(Jogador jogador) {
         System.out.println("O dragão ataca você!");
-        jogador.vida -= this.ataque;
+        int dano = this.ataque;
+        if (jogador.defendendo) {
+            // COLOQUEI DO DANO AQUI, QUE ESTAVA EM JOGADOR
+            dano /= 2;
+            jogador.defendendo = false;
+        }
+        jogador.vida -= dano;
         System.out.println("Sua vida: " + jogador.vida);
     }
 
