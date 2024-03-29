@@ -1,57 +1,31 @@
-import java.util.Random;
+class Jogador {
+    protected int vida;
+    protected int ataque;
+    protected boolean defendendo;
 
-abstract class Jogador {
-    private String nome; // Nome do jogador
-    private int vida; // Pontos de vida do jogador
-    private int mana; // Mana (ou energia) do jogador
-
-    // Construtor da classe Jogador
-    public Jogador(String nome, int vida, int mana) {
-        this.nome = nome;
-        this.vida = vida;
-        this.mana = mana;
+    public Jogador() {
+        this.vida = 100;
+        this.ataque = 10;
+        this.defendendo = false;
     }
 
-    // Método abstrato para atacar um inimigo
-    public abstract void atacar(Inimigo inimigo, Random random);
-
-    // Método abstrato para defender-se
-    public abstract void defender();
-
-    // Método para recuperar mana
-    public void recuperarMana() {
-        // Implementação genérica para recuperar mana
-        System.out.println(nome + " recuperou 20 de mana.");
-        mana += 20;
+    public void atacar(Inimigo dragao) {
+        System.out.println("Você ataca o dragão!");
+        int dano = this.ataque;
+        if (defendendo) {
+            dano /= 2;
+            defendendo = false;
+        }
+        dragao.vida -= dano;
+        System.out.println("Vida do dragão: " + dragao.vida);
     }
 
-    // Método para verificar se o jogador está vivo
+    public void defender() {
+        System.out.println("Você assume uma postura defensiva!");
+        defendendo = true;
+    }
+
     public boolean estaVivo() {
         return vida > 0;
-    }
-
-    // Getters e setters
-    public String getNome() {
-        return nome;
-    }
-
-    public int getVida() {
-        return vida;
-    }
-
-    public int getMana() {
-        return mana;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public void setVida(int vida) {
-        this.vida = vida;
-    }
-
-    public void setMana(int mana) {
-        this.mana = mana;
     }
 }
