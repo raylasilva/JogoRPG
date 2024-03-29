@@ -6,4 +6,3 @@ public class JogoRPG {
         jogo.iniciarJogo();
     }
 }
-

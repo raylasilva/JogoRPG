@@ -1,39 +1,21 @@
 import java.util.Random;
 
 class Inimigo {
-    private static String nome; // Nome do inimigo
-    private static int vida; // Pontos de vida do inimigo
+    protected int vida;
+    protected int ataque;
 
-    // Construtor da classe Inimigo
-    public Inimigo(String nome, int vida) {
-        this.nome = nome;
-        this.vida = vida;
+    public Inimigo() {
+        this.vida = 200;
+        this.ataque = 15;
     }
 
-    // Método para atacar um jogador
-    public static void atacar(Jogador jogador, Random random) {
-        // Implementação do ataque do inimigo
+    public void atacar(Jogador jogador) {
+        System.out.println("O dragão ataca você!");
+        jogador.vida -= this.ataque;
+        System.out.println("Sua vida: " + jogador.vida);
     }
 
-    // Método para verificar se o inimigo está vivo
-    public static boolean estaVivo() {
+    public boolean estaVivo() {
         return vida > 0;
-    }
-
-    // Getters e setters
-    public static String getNome() {
-        return nome;
-    }
-
-    public static int getVida() {
-        return vida;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public void setVida(int vida) {
-        this.vida = vida;
     }
 }
