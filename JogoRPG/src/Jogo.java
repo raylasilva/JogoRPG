@@ -2,7 +2,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 // Classe que representa o jogo
-class Jogo {
+public class Jogo {
     private Jogador jogador;
     private Inimigo inimigo;
 
@@ -17,7 +17,36 @@ class Jogo {
         System.out.println("====================================");
         System.out.println("  Bem-vindo ao Jogo de RPG Fantasia " );
         System.out.println("------------------------------------");
-        System.out.println("Você se depara com um temível dragão!\nPrepare-se para a batalha!");
+        System.out.println("Você precisa acessar o castelo e salvar a princesa, nisso se depara com um temível dragão!\nPrepare-se para a batalha!");
+        System.out.println("                                                  |*~=-.,   ");
+        System.out.println("                                                  |_,-'`    ");
+        System.out.println("                                                  |         ");
+        System.out.println("                                                 /^\\        ");
+        System.out.println("                   !_                           /   \\       ");
+        System.out.println("                   |*`~-.,                     /,    \\      ");
+        System.out.println("                   |.-~^`                     /#    \\     ");
+        System.out.println("                   |                        _/##_   _  \\_   ");
+        System.out.println("             [ ]_[ ]_[ ]_[ ]_[ ]            |_=_-=_ - =_|   ");
+        System.out.println("           |.-'|=     []     |   !_       |_.-   |    ");
+        System.out.println("           |   |_=- -        |   |*`~-.,  |  |=_-      |    ");
+        System.out.println("          /^  |=_= -        |   |_,-~`  /^\\ |_ - =[]  |    ");
+        System.out.println("      _  /   \\_|_=- _   _   _|  _|  _   /   \\|=_-      |    ");
+        System.out.println("     [ ]/,    \\[ ]_[ ]_[ ]_[ ]_[ ]_[ ]_/,    \\[ ]=-    |    ");
+        System.out.println("      |/#     \\_=-___=__=__- =-_ -=_ /#     \\| _ []  |    ");
+        System.out.println("     _/##_   _  \\_-_ =  _____       _/##_   _  _ -    |\\   ");
+        System.out.println("    [ ]_[ ]_[ ]_[ ]=_0~{_ _ _}~0   [ ]_[ ]_[ ]_[ ]=-   | \\  ");
+        System.out.println("    |_=__-_=-_  =_|-=_ |  ,  |     |_=-___-_ =-__|_    |  \\ ");
+        System.out.println("     | _- =-     |-_   | ((* |      |= _=       | -    |___\\");
+
+
+        //Carregamento pra da emoção ao jogo kkkk
+        for (int i = 5; i > 0; i--) {
+            try {
+                Thread.sleep(1000); // Simula o carregamento
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
         System.out.println("====================================");
         System.out.println("|                                  |");
         System.out.println("|        Escolha seu Herói:        |");
@@ -27,6 +56,7 @@ class Jogo {
         System.out.println("|  3. Sair do Jogo                 |");
         System.out.println("|                                  |");
         System.out.println("====================================");
+
         int escolha;
             do {
                 System.out.print("Escolha seu Herói: ");
@@ -59,7 +89,7 @@ class Jogo {
             if (escolha == 1) {
                 jogador.atacar(inimigo);
             } else if (escolha == 2) {
-                jogador.defender();
+                jogador.defender(inimigo);
             } else {
                 System.out.println("Escolha inválida. Tente novamente.");
                 continue;
@@ -73,7 +103,13 @@ class Jogo {
         if (jogador.estaVivo()) {
             System.out.println("Parabéns! Você derrotou o temível dragão!");
         } else {
-            System.out.println("Você foi derrotado pelo dragão! Game Over!");
+            System.out.println("Você foi derrotado pelo dragão!");
+            System.out.println("  _____          __  __ ______    ______      ________ _____  ");
+            System.out.println(" / ____|   /\\   |  \\/  |  ____|  / __ \\ \\    / /  ____|  __ \\ ");
+            System.out.println("| |  __   /  \\  | \\  / | |__    | |  | \\ \\  / /| |__  | |__) |");
+            System.out.println("| | |_ | / /\\ \\ | |\\/| |  __|   | |  | | \\ \\/ / |  __| |  _  / ");
+            System.out.println("| |__| |/ ____ \\| |  | | |____  | |__| |  \\  /  | |____| | \\ \\ ");
+            System.out.println(" \\_____/_/    \\_\\_|  |_|______|  \\____/    \\/   |______|_|  \\_\\");
         }
     }
 }
