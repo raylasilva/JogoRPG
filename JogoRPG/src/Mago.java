@@ -3,8 +3,8 @@ import java.util.Scanner;
 
 public class Mago extends Jogador {
     public Mago() {
-        this.vida = 100;
-        this.ataque = 20;
+        //Chamar o construtor direto da classe jogador, com atributos de vida, defesa e ataque ja setados
+        new Jogador();
     }
 
     public void atacar(Inimigo dragao) {

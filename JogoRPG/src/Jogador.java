@@ -4,9 +4,9 @@ public class Jogador {
     protected int defesa;
 
     public Jogador() {
-        this.vida = 100;
-        this.ataque = 10;
-        this.defesa = 10;
+        this.vida = 150;
+        this.ataque = 0;// Só inicializa o ataque, O valor de ataque ele escolhe
+        this.defesa = 0;// Só inicializa a defesa, O valor de defesa ele escolhe
     }
 
 
