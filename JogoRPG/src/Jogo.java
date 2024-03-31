@@ -101,9 +101,14 @@ public class Jogo {
         }
 
         if (jogador.estaVivo()) {
-            System.out.println("Parabéns! Você derrotou o temível dragão!");
+            System.out.println("------------------Você derrotou o temível dragão!---------------------");
+            System.out.println("#######  #######  #######  #######  ######   #######  #     #  #######");
+            System.out.println("#     #  #     #  #     #  #     #  #    #   #        ##    #  #");
+            System.out.println("#######  #######  #######  #######  #######  ####     # ### #  #######");
+            System.out.println("#        #     #  #    #   #     #  #     #  #        #    ##        #");
+            System.out.println("#        #     #  #    ##  #     #  #######  #######  #     #  #######");
         } else {
-            System.out.println("Você foi derrotado pelo dragão!");
+            System.out.println("------------------Você foi derrotado pelo dragão!-------------------");
             System.out.println("  _____          __  __ ______    ______      ________ _____  ");
             System.out.println(" / ____|   /\\   |  \\/  |  ____|  / __ \\ \\    / /  ____|  __ \\ ");
             System.out.println("| |  __   /  \\  | \\  / | |__    | |  | \\ \\  / /| |__  | |__) |");
