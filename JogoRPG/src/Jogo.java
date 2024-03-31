@@ -17,7 +17,7 @@ public class Jogo {
         System.out.println("====================================");
         System.out.println("  Bem-vindo ao Jogo de RPG Fantasia " );
         System.out.println("------------------------------------");
-        System.out.println("Você precisa acessar o castelo e salvar a princesa, nisso se depara com um temível dragão!\nPrepare-se para a batalha!");
+        System.out.println("Você chega a caverna do Volvagia, e terá que derrota-lo para salvar seu reino!\nPrepare-se para uma batalha épica!");
         System.out.println("                                                  |*~=-.,   ");
         System.out.println("                                                  |_,-'`    ");
         System.out.println("                                                  |         ");
@@ -49,7 +49,7 @@ public class Jogo {
         }
         System.out.println("====================================");
         System.out.println("|                                  |");
-        System.out.println("|        Escolha seu Herói:        |");
+        System.out.println("|     Escolha seu Herói:           |");
         System.out.println("|                                  |");
         System.out.println("|  1. Gandolf - O Mago             |");
         System.out.println("|  2. Aragon - O Guerreiro         |");
