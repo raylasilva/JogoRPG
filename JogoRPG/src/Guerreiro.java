@@ -1,5 +1,6 @@
 
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 public class Guerreiro extends Jogador {
     public Guerreiro() {
@@ -8,31 +9,40 @@ public class Guerreiro extends Jogador {
     }
 
     public void atacar(Inimigo dragao) {
-        int escolha;
+        int escolha=0;
         do {
-            System.out.println("Escolha seu ataque:");
-            System.out.println("1. Golpe Devastador - Dano: 35");
-            System.out.println("2. Matador de Dragão - Dano: 25");
-            System.out.println("3. Investida Brutal - Dano: 30");
-            System.out.println("4. Corte Furioso - Dano: 20 ");
-            Scanner scanner = new Scanner(System.in);
-            escolha = scanner.nextInt();
-            ataqueEspecial(dragao, escolha);
-        } while (escolha < 1 || escolha>4);
-    }
-
+            try {
+                System.out.println("Escolha seu ataque:");
+                System.out.println("1. Golpe Devastador - Dano: 35");
+                System.out.println("2. Matador de Dragão - Dano: 25");
+                System.out.println("3. Investida Brutal - Dano: 30");
+                System.out.println("4. Corte Furioso - Dano: 20");
+        
+                Scanner scanner = new Scanner(System.in);
+                escolha = scanner.nextInt();
+                ataqueEspecial(dragao, escolha);
+                } catch (InputMismatchException e) {
+                System.out.println("Opção de ataque inválida. Digite um número inteiro.");
+                }
+            } while (escolha < 1 || escolha > 4);
+        }
     public void defender(Inimigo dragao) {
-        int escolha;
+        int escolha=0;
         do {
-            System.out.println("Escolha sua defesa:");
-            System.out.println("1. Escudo: Um escudo grande e resistente para bloquear ataques físicos. - Dano: 2");
-            System.out.println("2. Grevas: ativar proteçaõ para as pernas, cobrindo  os pés até abaixo dos joelhos - Dano: 5");
-            System.out.println("3. Elmo: Um elmo robusto para proteger a cabeça contra ataques diretos, como bafo de fogo. - Dano: 10");
-            System.out.println("4. Manobras defensivas, com tecnicas de defesas como esquivas, bloqueis e contra-ataque - Dano: 15 ");
-            Scanner scanner = new Scanner(System.in);
-            escolha = scanner.nextInt();
-            defenderEspecial(dragao, escolha);
-        }while(escolha < 1 || escolha>4);
+            try {
+                System.out.println("Escolha sua defesa:");
+                System.out.println("1. Escudo: Um escudo grande e resistente para bloquear ataques físicos. - Dano: 2");
+                System.out.println("2. Grevas: ativar proteção para as pernas, cobrindo os pés até abaixo dos joelhos - Dano: 5");
+                System.out.println("3. Elmo: Um elmo robusto para proteger a cabeça contra ataques diretos, como bafo de fogo. - Dano: 10");
+                System.out.println("4. Manobras defensivas, com técnicas de defesa como esquivas, bloqueios e contra-ataque - Dano: 15");
+        
+                Scanner scanner = new Scanner(System.in);
+                escolha = scanner.nextInt();
+                defenderEspecial(dragao, escolha);
+                } catch (InputMismatchException e) {
+                System.out.println("Opção de defesa inválida. Digite um número inteiro.");
+                }
+            } while (escolha < 1 || escolha > 4);
         }
 
     public void defenderEspecial(Inimigo dragao, int escolha) {
