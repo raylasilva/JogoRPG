@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -59,24 +60,30 @@ public class Jogo {
 
         int escolha;
             do {
-                System.out.print("Escolha seu Herói: ");
-               escolha = scanner.nextInt();
+                try {
+                    System.out.print("Escolha seu Herói: ");
+                    escolha = scanner.nextInt();
 
-                switch (escolha) {
-                    case 1:
-                        //ESSE AQUI É PRA CHAMAR O QUE CADA UM TEM NA CLASSE AO SER ESCOLHIDO
-                        jogador = new Mago();
-                        System.out.println("Você escolheu o Mago Gandolf para lutar contra o terrível Dragão Volvagia!");
-                        break;
-                    case 2:
-                        jogador = new Guerreiro();
-                        System.out.println("Você escolheu o Guerreiro Aragon para lutar contra o terrível Dragão Volvagia!");
-                        break;
-                    case 3:
-                        System.out.println("Você saiu do jogo. Até logo!");
-                        return;
-                    default:
-                        System.out.println("Opção inválida. Por favor, escolha novamente.");
+                    switch (escolha) {
+                        case 1:
+                            //ESSE AQUI É PRA CHAMAR O QUE CADA UM TEM NA CLASSE AO SER ESCOLHIDO
+                            jogador = new Mago();
+                            System.out.println("Você escolheu o Mago Gandolf para lutar contra o terrível Dragão Volvagia!");
+                            break;
+                        case 2:
+                            jogador = new Guerreiro();
+                            System.out.println("Você escolheu o Guerreiro Aragon para lutar contra o terrível Dragão Volvagia!");
+                            break;
+                        case 3:
+                            System.out.println("Você saiu do jogo. Até logo!");
+                            return;
+                        default:
+                            System.out.println("Opção inválida. Por favor, escolha novamente.");
+                    }
+                } catch (InputMismatchException e){
+                    System.out.println("Opção inválida. Por favor, digite um número válido.");
+                    scanner.next(); //limpar o buffer
+                    escolha = 0;
                 }
             } while (escolha < 1 || escolha > 3);
 
