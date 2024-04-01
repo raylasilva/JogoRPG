@@ -91,7 +91,16 @@ public class Jogo {
             System.out.println("Escolha sua ação:");
             System.out.println("1. Atacar");
             System.out.println("2. Defender");
-             escolha = scanner.nextInt();
+            
+
+             //tratar exception ataque
+             try {
+                escolha = scanner.nextInt();
+                } catch (InputMismatchException e) {
+                System.out.println("Escolha inválida. Tente novamente.");
+                scanner.next(); 
+                continue; 
+                }
 
             if (escolha == 1) {
                 jogador.atacar(inimigo);
