@@ -16,7 +16,7 @@ public class Jogo {
         Scanner scanner = new Scanner(System.in);
         System.out.println("------------------------------------");
         System.out.println("====================================");
-        System.out.println("  Bem-vindo ao Jogo de RPG Fantasia " );
+        System.out.println("  Bem-vindo ao Jogo de RPG Fantasia ");
         System.out.println("------------------------------------");
         System.out.println("Você chega a caverna do Volvagia, e terá que derrota-lo para salvar seu reino!\nPrepare-se para uma batalha épica!");
         System.out.println("                                                  |*~=-.,   ");
@@ -25,14 +25,14 @@ public class Jogo {
         System.out.println("                                                 /^\\        ");
         System.out.println("                   !_                           /   \\       ");
         System.out.println("                   |*`~-.,                     /,    \\      ");
-        System.out.println("                   |.-~^`                     /#    \\     ");
+        System.out.println("                   |.-~^`                     /#      \\     ");
         System.out.println("                   |                        _/##_   _  \\_   ");
-        System.out.println("             [ ]_[ ]_[ ]_[ ]_[ ]            |_=_-=_ - =_|   ");
-        System.out.println("           |.-'|=     []     |   !_       |_.-   |    ");
-        System.out.println("           |   |_=- -        |   |*`~-.,  |  |=_-      |    ");
-        System.out.println("          /^  |=_= -        |   |_,-~`  /^\\ |_ - =[]  |    ");
-        System.out.println("      _  /   \\_|_=- _   _   _|  _|  _   /   \\|=_-      |    ");
-        System.out.println("     [ ]/,    \\[ ]_[ ]_[ ]_[ ]_[ ]_[ ]_/,    \\[ ]=-    |    ");
+        System.out.println("             [ ]_[ ]_[ ]_[ ]_[ ]            |_=_-=_  =_|   ");
+        System.out.println("           |.-'|=     []     |   !_         |_.-   |   ");
+        System.out.println("           |   |_=- -        |   |*`~-.,    | |=_-     |    ");
+        System.out.println("          /^  |=_= -        |   |_,-~`    /^\\ |_ - =[]|    ");
+        System.out.println("      _  /   \\_|_=- _   _   _|  _|  _   /   \\|=_-    |    ");
+        System.out.println("     [ ]/,    \\[ ]_[ ]_[ ]_[ ]_[ ]_[ ]_/,    \\[ ]=-  |    ");
         System.out.println("      |/#     \\_=-___=__=__- =-_ -=_ /#     \\| _ []  |    ");
         System.out.println("     _/##_   _  \\_-_ =  _____       _/##_   _  _ -    |\\   ");
         System.out.println("    [ ]_[ ]_[ ]_[ ]=_0~{_ _ _}~0   [ ]_[ ]_[ ]_[ ]=-   | \\  ");
@@ -59,48 +59,88 @@ public class Jogo {
         System.out.println("====================================");
 
         int escolha;
-            do {
-                try {
-                    System.out.print("Escolha seu Herói: ");
-                    escolha = scanner.nextInt();
+        do {
+            try {
+                System.out.print("Escolha seu Herói: ");
+                escolha = scanner.nextInt();
 
-                    switch (escolha) {
-                        case 1:
-                            //ESSE AQUI É PRA CHAMAR O QUE CADA UM TEM NA CLASSE AO SER ESCOLHIDO
-                            jogador = new Mago();
-                            System.out.println("Você escolheu o Mago Gandolf para lutar contra o terrível Dragão Volvagia!");
-                            break;
-                        case 2:
-                            jogador = new Guerreiro();
-                            System.out.println("Você escolheu o Guerreiro Aragon para lutar contra o terrível Dragão Volvagia!");
-                            break;
-                        case 3:
-                            System.out.println("Você saiu do jogo. Até logo!");
-                            return;
-                        default:
-                            System.out.println("Opção inválida. Por favor, escolha novamente.");
-                    }
-                } catch (InputMismatchException e){
-                    System.out.println("Opção inválida. Por favor, digite um número válido.");
-                    scanner.next(); //limpar o buffer
-                    escolha = 0;
+                switch (escolha) {
+                    case 1:
+                        //ESSE AQUI É PRA CHAMAR O QUE CADA UM TEM NA CLASSE AO SER ESCOLHIDO
+                        jogador = new Mago();
+                        System.out.println("Você escolheu o Mago Gandolf para lutar...");
+                        System.out.println("            ,    _\n" +
+                                "           /|   | |\n" +
+                                "         _/_\\_  >_<\n" +
+                                "        .-\\-/.   |\n" +
+                                "       /  | | \\_ |\n" +
+                                "       \\ \\| |\\__(/\n" +
+                                "       /(`---')  |\n" +
+                                "      / /     \\  |\n" +
+                                "   _.'  \\'-'  /  |\n" +
+                                "   `----'`=-='   ' ");
+                        System.out.println("contra o terrível Dragão Volvagia!");
+                        System.out.println("\n" +
+                                " \\----------/(           ___              ###########\n" +
+                                "   \\``````/ |,,\\        / @.\\_       ###################\n" +
+                                "     \\``/,,,|,,,,\\   _ / /____%>**@@########################\n" +
+                                "      \\`____|,,,,,\\/...//          ###################\n" +
+                                "              ~\\, .... /--------/(       ###########\n" +
+                                "              /....____----~~~/,,,,\\\n" +
+                                "    |       /`../~`))  ~-,,,/,,,,,,,,\\\n" +
+                                "    |\\___/``./``         \\/____________\\\n" +
+                                "     \\__ /``\n");
+                        break;
+                    case 2:
+                        jogador = new Guerreiro();
+                        System.out.println("Você escolheu o Guerreiro Aragon para lutar...");
+                        System.out.println("              /\n" +
+                                "       ,~~   /\n" +
+                                "   _  <=)  _/_\n" +
+                                "  /I\\.=\"==.{>\n" +
+                                "  \\I/-\\T/-'\n" +
+                                "      /_\\\n" +
+                                "     // \\\\_\n" +
+                                "    _I    /");
+                        System.out.println("contra o terrível Dragão Volvagia!");
+                        System.out.println("\n" +
+                                " \\----------/(           ___              ###########\n" +
+                                "   \\``````/ |,,\\        / @.\\_       ###################\n" +
+                                "     \\``/,,,|,,,,\\   _ / /____%>**@@########################\n" +
+                                "      \\`____|,,,,,\\/...//          ###################\n" +
+                                "              ~\\, .... /--------/(       ###########\n" +
+                                "              /....____----~~~/,,,,\\\n" +
+                                "    |       /`../~`))  ~-,,,/,,,,,,,,\\\n" +
+                                "    |\\___/``./``         \\/____________\\\n" +
+                                "     \\__ /``\n");
+                        break;
+                    case 3:
+                        System.out.println("Você saiu do jogo. Até logo!");
+                        return;
+                    default:
+                        System.out.println("Opção inválida. Por favor, escolha novamente.");
                 }
-            } while (escolha < 1 || escolha > 3);
+            } catch (InputMismatchException e) {
+                System.out.println("Opção inválida. Por favor, digite um número válido.");
+                scanner.next(); //limpar o buffer
+                escolha = 0;
+            }
+        } while (escolha < 1 || escolha > 3);
 
         while (jogador.estaVivo() && inimigo.estaVivo()) {
             System.out.println("Escolha sua ação:");
             System.out.println("1. Atacar");
             System.out.println("2. Defender");
-            
 
-             //tratar exception ataque
-             try {
+
+            //tratar exception ataque
+            try {
                 escolha = scanner.nextInt();
-                } catch (InputMismatchException e) {
+            } catch (InputMismatchException e) {
                 System.out.println("Escolha inválida. Tente novamente.");
-                scanner.next(); 
-                continue; 
-                }
+                scanner.next();
+                continue;
+            }
 
             if (escolha == 1) {
                 jogador.atacar(inimigo);

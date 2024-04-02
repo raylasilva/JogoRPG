@@ -9,9 +9,6 @@ public class Jogador {
         this.defesa = 0;// Só inicializa a defesa, O valor de defesa ele escolhe
     }
 
-
-
-    // ESSE AQUI REALMENTE AINDA NÃO ENTENDI A LÓGICA T.T o sono bateu
     public void atacar(Inimigo dragao) {
         System.out.println("Ataque indefinido.");
     }
@@ -25,7 +22,6 @@ public class Jogador {
         System.out.println("Defesa indefinida.");
     }
 
-//alterado ate aqui, calma
 
     public void defenderEspecial(Inimigo dragao, int escolha) {
         System.out.println("Defesa indefinida.");

@@ -33,8 +33,7 @@ public class Inimigo {
         }
     }
 
-
-        public boolean estaVivo () {
-            return vida > 0;
-        }
+    public boolean estaVivo() {
+        return vida > 0;
     }
+}

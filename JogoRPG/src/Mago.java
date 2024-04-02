@@ -26,6 +26,33 @@ public class Mago extends Jogador {
             }
         } while (escolha < 1 || escolha > 4);
     }
+    public void ataqueEspecial(Inimigo dragao, int escolha) {
+        switch (escolha) {
+            case 1:
+                System.out.println("Você lança um Raio Gélido diretamente contra o coração flamejante do dragão, desafiando sua própria natureza!");
+                dragao.vida -= 10;
+                break;
+            case 2:
+                System.out.println("Você lança uma Bola de Fogo no dragão! Por essa ele não esperava, o feitiço virou contra o feitceiro?!");
+                dragao.vida -= 20;
+                break;
+            case 3:
+                System.out.println("Você lança um Trovão no dragão! Ele levou um choque ficando desnorteado");
+                dragao.vida -= 20;
+                break;
+            case 4:
+                System.out.println("Você conjura uma Tempestade de Gelo sobre o dragão! Agora esfriou!");
+                dragao.vida -= 20;
+                break;
+            default:
+                System.out.println("Opção de ataque inválida.");
+                break;
+        }
+        //Não mostrar vidas em negativos
+        if (dragao.vida > 0) {
+            System.out.println("Vida do dragão: " + dragao.vida);
+        }
+    }
 
     public void defender(Inimigo dragao) {
         int escolha =0;
@@ -74,33 +101,7 @@ public class Mago extends Jogador {
     }
 
 
-    public void ataqueEspecial(Inimigo dragao, int escolha) {
-        switch (escolha) {
-            case 1:
-                System.out.println("Você lança um Raio Gélido no dragão!");
-                dragao.vida -= 10;
-                break;
-            case 2:
-                System.out.println("Você lança uma Bola de Fogo no dragão!");
-                dragao.vida -= 20;
-                break;
-            case 3:
-                System.out.println("Você lança um Trovão no dragão!");
-                dragao.vida -= 20;
-                break;
-            case 4:
-                System.out.println("Você conjura uma Tempestade de Gelo sobre o dragão!");
-                dragao.vida -= 20;
-                break;
-            default:
-                System.out.println("Opção de ataque inválida.");
-                break;
-        }
-        //Não mostrar vidas em negativos
-        if (dragao.vida > 0) {
-            System.out.println("Vida do dragão: " + dragao.vida);
-        }
-    }
+
 
 }
 
